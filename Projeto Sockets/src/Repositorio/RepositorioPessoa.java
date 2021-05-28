@@ -7,6 +7,7 @@ package Repositorio;
 
 import java.util.ArrayList;
 import java.util.List;
+import jdk.internal.util.xml.impl.Input;
 import model.Pessoa;
 
 /**
@@ -45,8 +46,15 @@ public class RepositorioPessoa implements IRepositorioPessoa {
     }
 
     @Override
-    public boolean buscaPessoaCpf(String cpf) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Pessoa buscaPessoaCpf(String cpf) {
+        for(Pessoa pessoa : listarPessoas){
+            if(pessoa.getCpf() == cpf){
+                System.out.println(pessoa.getCpf());
+                System.out.println(pessoa.getNome());
+                System.out.println(pessoa.getEndereco());
+            }
+        }
+        return null;
     }
 
     @Override

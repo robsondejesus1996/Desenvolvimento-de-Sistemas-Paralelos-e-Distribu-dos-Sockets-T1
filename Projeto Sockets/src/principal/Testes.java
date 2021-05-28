@@ -8,6 +8,7 @@ package principal;
 import Repositorio.RepositorioPessoa;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import model.Pessoa;
 
 /**
@@ -25,22 +26,31 @@ public class Testes {
         
         System.out.println("*******************Teste deletar**********************");
         
-        rp.deletarPessoaPorCPF("09527658969");
+        rp.deletarPessoaPorCPF("323232232323");
         listarPessoa();
-        
-        
-        
+//        
+//        
+//        
         System.out.println("**********teste alterar pessoa ******************");
         alterar();
         listarPessoa();
+        
+//        
+//        
+        System.out.println("**********teste de busca pelo cpf**************");
+        rp.buscaPessoaCpf("09527658969");
+
     }
+    
+    
+    
     
     public static void alterar(){
         
         Pessoa pessoa2 = new Pessoa();
-        pessoa2.setCpf("323232232323");
-        pessoa2.setNome("Luiz de souza pinto");
-        pessoa2.setEndereco("Rio do sul fim da rua");
+        pessoa2.setCpf("09527658962");
+        pessoa2.setNome("Caio ze ruela");
+        pessoa2.setEndereco("teste alteração");
         rp.alterarPessoa(pessoa2);
         
     }
@@ -57,6 +67,16 @@ public class Testes {
         pessoa2.setNome("Luiz de souza");
         pessoa2.setEndereco("Rio do sul");
         rp.salvarPessoa(pessoa2);
+        
+        
+        Pessoa pessoa3 = new Pessoa();
+        pessoa3.setCpf("09527658962");
+        pessoa3.setNome("Caio");
+        pessoa3.setEndereco("Rio do sul Tr");
+        rp.salvarPessoa(pessoa3);
+        
+        
+        
     }
     
     public static void listarPessoa(){

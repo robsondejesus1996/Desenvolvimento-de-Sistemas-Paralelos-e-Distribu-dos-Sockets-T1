@@ -20,7 +20,7 @@ public interface IRepositorioPessoa {
     public boolean salvarPessoa(Pessoa pessoa);
     public boolean deletarPessoaPorCPF(String cpf);
     public List<Pessoa> listarPessoa();
-    public boolean buscaPessoaCpf(String cpf);
+    public Pessoa buscaPessoaCpf(String cpf);
     public boolean alterarPessoa(Pessoa pessoa);
     
     
