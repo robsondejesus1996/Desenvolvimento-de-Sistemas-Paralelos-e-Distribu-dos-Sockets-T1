@@ -9,6 +9,11 @@ package model;
  *
  * @author Robson de Jesus
  */
-public class PessoaFisica {
+
+//temos o relacionamento de heranca aqui com pessoa
+public class PessoaFisica extends Pessoa{
+    
+    double renda;
+    int dependentes;
     
 }

@@ -9,6 +9,13 @@ package model;
  *
  * @author Robson de Jesus
  */
+
+//relacionamento de agregação
 public class Time {
+    
+    String nome;
+    int subdivisao; 
+    Pessoa pessoa;
+    
     
 }
